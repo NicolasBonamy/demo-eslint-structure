@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { API_URL } from './GameList';
+import MainLayout from '../../layouts/MainLayout/MainLayout';
+import { API_URL } from '../../../consts/api';
 
-export default function GameDetails(props) {
+export default function GameDetailsView(props) {
   const [game, setGame] = useState({});
 
   // props.match.params.id
@@ -24,7 +25,7 @@ export default function GameDetails(props) {
   const { name, rating, background_image: backgroundImage, genres } = game;
 
   return (
-    <main>
+    <MainLayout>
       <h2>{name}</h2>
       <div>{rating}</div>
       <img src={backgroundImage} alt={name} width="100%" />
@@ -36,11 +37,11 @@ export default function GameDetails(props) {
       </ul>
       <br />
       <Link to="/">Go to game list</Link>
-    </main>
+    </MainLayout>
   );
 }
 
-GameDetails.propTypes = {
+GameDetailsView.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string,
