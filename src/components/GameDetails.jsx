@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import { API_URL } from './GameList';
 import { Link } from 'react-router-dom';
+import { API_URL } from './GameList';
 
 export default function GameDetails(props) {
   const [game, setGame] = useState({});
@@ -27,7 +27,7 @@ export default function GameDetails(props) {
     <main>
       <h2>{name}</h2>
       <div>{rating}</div>
-      <img src={backgroundImage} alt={name} width='100%' />
+      <img src={backgroundImage} alt={name} width="100%" />
       <ul>
         {genres &&
           genres.map((genre) => {
@@ -35,7 +35,7 @@ export default function GameDetails(props) {
           })}
       </ul>
       <br />
-      <Link to='/'>Go to game list</Link>
+      <Link to="/">Go to game list</Link>
     </main>
   );
 }

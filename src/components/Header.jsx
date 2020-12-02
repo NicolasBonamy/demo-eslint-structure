@@ -5,7 +5,7 @@ export default function Header(props) {
   const { title } = props;
   return (
     <header>
-      <h1>Welcome to {title}</h1>
+      <h1>{`Welcome to ${title}`}</h1>
     </header>
   );
 }

@@ -17,8 +17,8 @@ export default function GameList() {
   };
 
   return (
-    <section className='GameList'>
-      <button type='button' onClick={() => setOnlyBest(!onlyBest)}>
+    <section className="GameList">
+      <button type="button" onClick={() => setOnlyBest(!onlyBest)}>
         {onlyBest ? 'All games' : 'Best games'}
       </button>
       <hr />
